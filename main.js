@@ -1,10 +1,5 @@
-let elements = document.querySelectorAll('.heading-1');
-// h.innerText = "Hello World!";
 
-for(let element of elements){
-    element.classList = "text-white text-2xl bg-blue-300 text-center";
-    
-}
+
 
 //event handler
 function clickHandler(){
@@ -18,22 +13,28 @@ function clickHandlerAgain(){
 
 }
 
+
+
+//clickEventHandler Function
+
+function clickEventHandler(){
+  const button = document.querySelector('#bot')
+  button.classList.add('text-green-700','bg-blue-300');
+  
+}
+
+
+
+
+
 function sayHello(){
-  // console.log('Hello Friends!');
-
-  let buttons = document.querySelectorAll('.btn');
-  for(let button of buttons){
-  button.classList.add('text-2xl');
-}
+  console.log('Hello Friends!');
 
 }
 
-function sayHi(){
-  // console.log('Hi Friends');
 
-let buttons = document.querySelector('.btn');
-buttons.classList.add('text-2xl');
-
+function sayHi(s){
+console.log('Hi Friends!', s.target);
 
 }
 
@@ -43,10 +44,6 @@ for(const button of buttons){
 
   button.addEventListener('click', sayHello);
   button.addEventListener('click', sayHi);
-  button.addEventListener('click',function(){
-    console.log('i great you!');
-  })
-  
-  button.removeEventListener('click',sayHi);
+
 }
 
