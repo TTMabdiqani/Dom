@@ -47,3 +47,23 @@ for(const button of buttons){
 
 }
 
+
+
+//add new div in java script
+
+let newDiv = document.createElement('div');
+newDiv.textContent = "New Div";
+
+newDiv.classList.add('bg-red-500', 'text-white', 'p-8', 'mt-6');
+
+document.body.appendChild(newDiv);
+
+newDiv.addEventListener('click', function(event){
+  let newSpan = document.createElement('span');
+  newSpan.textContent = "Hi I'm Span !";
+  newSpan.classList.add('text-blue-400','text-center');
+
+  event.target.appendChild(newSpan);
+  // document.body.appendChild(newSpan);
+});
+
